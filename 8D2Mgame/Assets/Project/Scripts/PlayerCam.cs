@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerCam : MonoBehaviour
 {
     // sens = sensitivity
-    public float sensX;
-    public float sensY;
+    private float sensX = 1500f;
+    private float sensY = 1500f;
 
     public Transform orientation;
 
     float xRotation;
     float yRotation;
+    
     // Start is called before the first frame update
     void Start()
     {
