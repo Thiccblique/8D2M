@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 497254250}
   - component: {fileID: 497254249}
   - component: {fileID: 497254248}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 1005274616}
   - component: {fileID: 1005274615}
   - component: {fileID: 1005274614}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 1237215761}
   - component: {fileID: 1237215760}
   - component: {fileID: 1237215759}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583030232}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5ec2299122bc39641bda333e2ff602ac, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -880,7 +880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712218443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.68, z: -13.99}
+  m_LocalPosition: {x: 0, y: 1.5, z: -13.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -904,7 +904,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &1712218446
 MonoBehaviour:
@@ -922,7 +922,7 @@ MonoBehaviour:
   groundDrag: 5
   jumpForce: 12
   jumpCooldown: 0.25
-  airMultiplier: 1
+  airMultiplier: 0
   jumpKey: 32
   playerHeight: 3
   whatIsGround:

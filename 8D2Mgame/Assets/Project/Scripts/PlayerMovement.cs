@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
-    bool readtToJump;
+    bool readyToJump;
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        readyToJump = true;
     }
     
     // Update is called once per frame
@@ -65,9 +66,9 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey(jumpKey) && readtToJump && grounded)
+        if(Input.GetKey(jumpKey) && readyToJump && grounded)
         {
-            readtToJump = false;
+            readyToJump = false;
             Jump();
             Invoke(nameof(ResetJump), jumpCooldown);
         }
@@ -113,6 +114,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void ResetJump()
     {
-        readtToJump = true;
+        readyToJump = true;
     }
 }
