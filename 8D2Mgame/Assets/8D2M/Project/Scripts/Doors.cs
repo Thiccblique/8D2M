@@ -57,9 +57,9 @@ public class Doors : MonoBehaviour
     // If ran, it runs the "open" animation, and ignorse the closed animation 
     void DoorOpens()
     {
-        //Debug.Log("It Opens");
-        door.SetBool("DoorOpen", true);
-        door.SetBool("DoorClosed", false);
+        Debug.Log("It Opens");
+        door.SetBool("Open", true);
+        door.SetBool("Closed", false);
         doorSound.Play();
 
     }
@@ -67,7 +67,7 @@ public class Doors : MonoBehaviour
     void DoorCloses()
     {
         //Debug.Log("It Closes");
-        door.SetBool("DoorOpen", false);
-        door.SetBool("DoorClosed", true);
+        door.SetBool("Open", false);
+        door.SetBool("Closed", true);
     }
 }
