@@ -20,8 +20,7 @@ public class ItemPickUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Stops item from having gravity.
-        Item.GetComponent<Rigidbody>().isKinematic = false;
+        
         inReach = false;
     }
 
@@ -62,6 +61,7 @@ public class ItemPickUp : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        // If reach took is in reach of item and you press Grab key, you run Grab function 
         if (other.gameObject.tag == "Reach")
         {
             if (inReach && Input.GetKey(Grab))
