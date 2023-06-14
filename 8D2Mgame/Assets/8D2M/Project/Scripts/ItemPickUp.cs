@@ -35,11 +35,11 @@ public class ItemPickUp : MonoBehaviour
 
     private void DropItem()
     {
-        //Drops item
+        //Removes Item as a child
         ItemHolder.DetachChildren();
         // Gives item new possition when droppped 
         Item.transform.eulerAngles = new Vector3(Item.transform.position.x, Item.transform.position.z, Item.transform.position.y);
-        // re-enables gravity to allow item fall drop
+        // re-enables gravity and colider to allow item fall drop
         Item.GetComponent<Rigidbody>().isKinematic = false;
         Item.GetComponent<MeshCollider>().enabled = true;
     }
