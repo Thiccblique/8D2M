@@ -46,6 +46,7 @@ public class ItemPickUp : MonoBehaviour
 
     private void GrabItem()
     {
+        // Disables gravity 
         Item.GetComponent<Rigidbody>().isKinematic = true;
         // Sets item position and rotation to be the same as ItemHolder
         Item.transform.position = ItemHolder.transform.position;
