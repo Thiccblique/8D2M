@@ -48,12 +48,14 @@ public class ItemPickUp : MonoBehaviour
     private void GrabItem()
     {
         Item.GetComponent<Rigidbody>().isKinematic = true;
-
+        // Sets item position and rotation to be the same as ItemHolder
         Item.transform.position = ItemHolder.transform.position;
         Item.transform.rotation = ItemHolder.transform.rotation;
+
         // Disables collider on item to prevent collision with player
         Item.GetComponent<MeshCollider>().enabled = false;
 
+        // Item transforms position abd becones a child to the ItemHolder
         Item.transform.SetParent(ItemHolder);
         pickUpSound.Play();
     }
