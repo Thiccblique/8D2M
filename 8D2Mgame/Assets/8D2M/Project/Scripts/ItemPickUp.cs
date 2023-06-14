@@ -51,7 +51,7 @@ public class ItemPickUp : MonoBehaviour
 
         Item.transform.position = ItemHolder.transform.position;
         Item.transform.rotation = ItemHolder.transform.rotation;
-
+        // Disables collider on item to prevent collision with player
         Item.GetComponent<MeshCollider>().enabled = false;
 
         Item.transform.SetParent(ItemHolder);
