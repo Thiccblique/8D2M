@@ -6,7 +6,7 @@ public class Doors : MonoBehaviour
 {
 
     [Header("Keybinds")]
-    public KeyCode Interact = KeyCode.E;
+    public KeyCode interactKey = KeyCode.E;
 
     public Animator door;
     public GameObject openText;
@@ -44,7 +44,7 @@ public class Doors : MonoBehaviour
     void Update()
     {
         // If the door is closed, the open animation plays, if not the closed animation plays
-        if (inReach && Input.GetKeyDown(Interact))
+        if (inReach && Input.GetKeyDown(interactKey))
         {
             DoorOpens();
         }

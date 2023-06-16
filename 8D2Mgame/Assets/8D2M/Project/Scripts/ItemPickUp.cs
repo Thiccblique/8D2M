@@ -6,8 +6,8 @@ public class ItemPickUp : MonoBehaviour
 {
 
     [Header("Keybinds")]
-    public KeyCode Grab = KeyCode.E;
-    public KeyCode Drop = KeyCode.Q;
+    public KeyCode grabKey = KeyCode.E;
+    public KeyCode dropKey = KeyCode.Q;
 
     [Header("Objects")]
     public GameObject Item;
@@ -27,7 +27,7 @@ public class ItemPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(Drop))
+        if(Input.GetKey(dropKey))
         {
             DropItem();
         }
@@ -65,7 +65,7 @@ public class ItemPickUp : MonoBehaviour
         // If reach took is in reach of item and you press Grab key, you run Grab function 
         if (other.gameObject.tag == "Reach")
         {
-            if (inReach && Input.GetKey(Grab))
+            if (inReach && Input.GetKey(grabKey))
             {
                 GrabItem();
             }
