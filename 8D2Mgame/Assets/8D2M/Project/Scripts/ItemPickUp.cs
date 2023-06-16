@@ -27,10 +27,7 @@ public class ItemPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(dropKey))
-        {
-            DropItem();
-        }
+      
     }
 
     private void DropItem()
@@ -68,6 +65,13 @@ public class ItemPickUp : MonoBehaviour
             if (inReach && Input.GetKey(grabKey))
             {
                 GrabItem();
+            }
+        }
+        if (other.gameObject.tag == "Dropper")
+        {
+            if (Input.GetKey(dropKey))
+            {
+                DropItem();
             }
         }
     }
