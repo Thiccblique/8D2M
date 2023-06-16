@@ -1304,24 +1304,6 @@ Transform:
   m_Father: {fileID: 2103261321}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1195468412 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 76790681, guid: 319d10503b612974f92b974caa4c525d, type: 3}
-  m_PrefabInstance: {fileID: 4510346400534929322}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1195468413
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195468412}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1217723610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,10 +2541,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 76790681, guid: 319d10503b612974f92b974caa4c525d, type: 3}
-      propertyPath: m_TagString
-      value: Dropper
-      objectReference: {fileID: 0}
     - target: {fileID: 4510346400740260402, guid: 319d10503b612974f92b974caa4c525d, type: 3}
       propertyPath: m_RootOrder
       value: 1

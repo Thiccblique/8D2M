@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     bool grounded;
 
+    [Header("Audio")]
+    public AudioSource walkSound;
+    public AudioSource sprintSound;
+
     public Transform orientation;
 
     float horizontalInput;
@@ -68,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
         MyInput();
         SpeedControl();
         StateHandler();
+        AudioInputs();
 
         // Applys the drag
         if (grounded)
@@ -107,6 +112,31 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
+    }
+    private void AudioInputs()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            walkSound.Play();
+
+            if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(sprintKey))
+            {
+                walkSound.Stop();
+                sprintSound.Play();
+            }
+        }
+       
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            walkSound.Stop();
+
+            if (Input.GetKeyUp(sprintKey))
+            {
+               
+                sprintSound.Stop();
+            }
+        }
+
     }
 
     private void StateHandler()
